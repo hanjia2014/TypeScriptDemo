@@ -1,0 +1,6 @@
+C:\Projects\VS2015\TSExample2\TSExample2\bin\TSExample2.dll.config
+C:\Projects\VS2015\TSExample2\TSExample2\bin\TSExample2.dll
+C:\Projects\VS2015\TSExample2\TSExample2\bin\TSExample2.pdb
+C:\Projects\VS2015\TSExample2\TSExample2\obj\Debug\TSExample2.csprojResolveAssemblyReference.cache
+C:\Projects\VS2015\TSExample2\TSExample2\obj\Debug\TSExample2.dll
+C:\Projects\VS2015\TSExample2\TSExample2\obj\Debug\TSExample2.pdb

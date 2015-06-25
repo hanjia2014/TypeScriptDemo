@@ -1,0 +1,14 @@
+﻿<div class="jumbotron">
+    {{playList.controllerMessage}}<br />
+    <div data-ng-click="playList.getWeather()">Click {{playList.weather.name}}</div>
+    {{person.Id | currency}} -- {{person.Name}} -- {{message}}
+    <ul class="list-group">
+        <li ng-show="playList.favorites" class="list-group-item" ng-repeat="t in playList.favorites">
+            {{t.title}}
+        </li>
+    </ul>
+    <button class="btn btn-block" ng-click="playList.getFavourites()">{{playList.favorites ? 'Clear' : 'Get'}} Favorites Tracks</button>
+
+    <input placeholder="latitude" data-ng-model="lat" /><input placeholder="longitude" data-ng-model="lon" /> <button data-ng-click="playList.getWeatherAsync()">Get Weather Async</button>
+    <div>{{playList.weatherAsync.name}}</div>
+</div>
