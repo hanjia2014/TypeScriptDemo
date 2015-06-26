@@ -28,9 +28,16 @@
         }
 
         getWeatherAsync = () => {
-            this.weatherService.getWeatherPromise(this.$scope.lat, this.$scope.lon).then((data: any) => {
+            this.$q.all([this.weatherService.getWeatherPromise(this.$scope.lat, this.$scope.lon).then((data: any) => {
                 this.weatherAsync = data;
+            })
+            ]).then(() => {
+                console.log("all promises done");
             });
+
+            //this.weatherService.getWeatherPromise(this.$scope.lat, this.$scope.lon).then((data: any) => {
+            //    this.weatherAsync = data;
+            //});
         }
     }
 
