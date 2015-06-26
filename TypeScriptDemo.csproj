@@ -138,8 +138,10 @@
     <TypeScriptCompile Include="app\controllers\TSDemoController.ts" />
     <TypeScriptCompile Include="app\interfaces\IPlaylistService.ts" />
     <TypeScriptCompile Include="app\interfaces\ITrack.ts" />
+    <TypeScriptCompile Include="app\interfaces\IWeatherService.ts" />
     <TypeScriptCompile Include="app\scopes\Scope.ts" />
     <TypeScriptCompile Include="app\services\PlaylistService.ts" />
+    <TypeScriptCompile Include="app\services\WeatherService.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />

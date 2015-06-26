@@ -4,3 +4,9 @@ C:\Projects\VS2015\TypeScriptDemo\TSExample2\bin\TypeScriptDemo.pdb
 C:\Projects\VS2015\TypeScriptDemo\TSExample2\obj\Debug\TypeScriptDemo.csprojResolveAssemblyReference.cache
 C:\Projects\VS2015\TypeScriptDemo\TSExample2\obj\Debug\TypeScriptDemo.dll
 C:\Projects\VS2015\TypeScriptDemo\TSExample2\obj\Debug\TypeScriptDemo.pdb
+C:\Projects\VS2015\TypeScriptDemo\TypeScriptDemo\obj\Debug\TypeScriptDemo.csprojResolveAssemblyReference.cache
+C:\Projects\VS2015\TypeScriptDemo\TypeScriptDemo\obj\Debug\TypeScriptDemo.dll
+C:\Projects\VS2015\TypeScriptDemo\TypeScriptDemo\obj\Debug\TypeScriptDemo.pdb
+C:\Projects\VS2015\TypeScriptDemo\TypeScriptDemo\bin\TypeScriptDemo.dll.config
+C:\Projects\VS2015\TypeScriptDemo\TypeScriptDemo\bin\TypeScriptDemo.dll
+C:\Projects\VS2015\TypeScriptDemo\TypeScriptDemo\bin\TypeScriptDemo.pdb

@@ -2,8 +2,8 @@
     export class TSDemoController {
         private weather: any;
         playListService: TSExample2.Interfaces.IPlayListService;
-        static $inject = ["TSExample2.Services.PlayListService", "$scope", "$http", "$q"];
-        constructor(playListService: TSExample2.Interfaces.IPlayListService, private $scope: TSExample2.Scopes.IGenericScope, private $http: ng.IHttpService, private $q: ng.IQService) {
+        static $inject = ["TSExample2.Services.PlayListService", "$scope", "$http", "$q", "TSExample2.Services.WeatherService"];
+        constructor(playListService: TSExample2.Interfaces.IPlayListService, private $scope: TSExample2.Scopes.IGenericScope, private $http: ng.IHttpService, private $q: ng.IQService, private weatherService: TSExample2.Services.WeatherService) {
 
             this.playListService = playListService;
             this.$scope.message = "Hello from scope";
@@ -28,22 +28,9 @@
         }
 
         getWeatherAsync = () => {
-            this.fetchWeatherPromise(this.$scope.lat, this.$scope.lon).then((data: any) => {
+            this.weatherService.getWeatherPromise(this.$scope.lat, this.$scope.lon).then((data: any) => {
                 this.weatherAsync = data;
             });
-        }
-
-        fetchWeatherPromise(lat: number, lon: string): ng.IPromise<any> {
-            var deferred = this.$q.defer();
-
-            this.$http.get('http://api.openweathermap.org/data/2.5/weather' + "?lat=" + lat + "&lon=" + lon)
-                .then(function (result) {
-                deferred.resolve(result.data);
-            }, function (error) {
-                    deferred.reject(error);
-                });
-
-            return deferred.promise;
         }
     }
 

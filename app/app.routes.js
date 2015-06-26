@@ -8,7 +8,8 @@ var TSExample2;
                 controller: "TSExample2.Controllers.TSDemoController",
                 templateUrl: "/app/views/playlist.html",
                 controllerAs: "playList"
-            }).otherwise({
+            })
+                .otherwise({
                 redirectTo: "/home"
             });
         };

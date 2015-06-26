@@ -3,16 +3,17 @@ var TSExample2;
     var Controllers;
     (function (Controllers) {
         var TSDemoController = (function () {
-            function TSDemoController(playListService, $scope, $http, $q) {
+            function TSDemoController(playListService, $scope, $http, $q, weatherService) {
                 var _this = this;
                 this.$scope = $scope;
                 this.$http = $http;
                 this.$q = $q;
+                this.weatherService = weatherService;
                 this.getFavourites = function () {
                     _this.favorites = _this.favorites ? null : _this.playListService.getPlaylist();
                 };
                 this.getWeatherAsync = function () {
-                    _this.fetchWeatherPromise(_this.$scope.lat, _this.$scope.lon).then(function (data) {
+                    _this.weatherService.getWeatherPromise(_this.$scope.lat, _this.$scope.lon).then(function (data) {
                         _this.weatherAsync = data;
                     });
                 };
@@ -30,16 +31,7 @@ var TSExample2;
                     _this.controllerMessage = "Hello";
                 });
             };
-            TSDemoController.prototype.fetchWeatherPromise = function (lat, lon) {
-                var deferred = this.$q.defer();
-                this.$http.get('http://api.openweathermap.org/data/2.5/weather' + "?lat=" + lat + "&lon=" + lon).then(function (result) {
-                    deferred.resolve(result.data);
-                }, function (error) {
-                    deferred.reject(error);
-                });
-                return deferred.promise;
-            };
-            TSDemoController.$inject = ["TSExample2.Services.PlayListService", "$scope", "$http", "$q"];
+            TSDemoController.$inject = ["TSExample2.Services.PlayListService", "$scope", "$http", "$q", "TSExample2.Services.WeatherService"];
             return TSDemoController;
         })();
         Controllers.TSDemoController = TSDemoController;
