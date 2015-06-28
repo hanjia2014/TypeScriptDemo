@@ -13,9 +13,18 @@ var TSExample2;
                     _this.favorites = _this.favorites ? null : _this.playListService.getPlaylist();
                 };
                 this.getWeatherAsync = function () {
-                    _this.weatherService.getWeatherPromise(_this.$scope.lat, _this.$scope.lon).then(function (data) {
-                        _this.weatherAsync = data;
+                    _this.$q.all([_this.weatherService.getWeatherPromise(_this.$scope.lat, _this.$scope.lon).then(function (data) {
+                            _this.weatherAsync = data;
+                        })
+                    ]).then(function () {
+                        console.log("all promises done");
                     });
+                    //this.weatherService.getWeatherPromise(this.$scope.lat, this.$scope.lon).then((data: any) => {
+                    //    this.weatherAsync = data;
+                    //});
+                };
+                this.setMessage = function (msg) {
+                    _this.playListService.setMessage(msg);
                 };
                 this.playListService = playListService;
                 this.$scope.message = "Hello from scope";

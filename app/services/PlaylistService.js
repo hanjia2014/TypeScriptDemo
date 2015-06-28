@@ -4,6 +4,13 @@ var TSExample2;
     (function (Services) {
         var PlayListService = (function () {
             function PlayListService($http) {
+                var _this = this;
+                this.getMessage = function () {
+                    return _this.message;
+                };
+                this.setMessage = function (msg) {
+                    _this.message = msg;
+                };
                 this.getPlaylist = function () {
                     var res = [
                         { title: "Numb", artist: "Linkin Park", rating: 5 },

@@ -39,6 +39,10 @@
             //    this.weatherAsync = data;
             //});
         }
+
+        setMessage = (msg: string) => {
+            this.playListService.setMessage(msg);
+        }
     }
 
     angular.module("TSExample2").controller("TSExample2.Controllers.TSDemoController", TSDemoController);

@@ -8,6 +8,11 @@
                     templateUrl: "/app/views/playlist.html",
                     controllerAs: "playList"
                 })
+                .when("/test",
+                {
+                    controller: "TSExample2.Controllers.TSTestController",
+                    templateUrl: "/app/views/test.html",
+                })
                 .otherwise({
                 redirectTo: "/home"
             });

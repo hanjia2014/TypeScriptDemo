@@ -1,9 +1,18 @@
 ﻿module TSExample2.Services {
     export class PlayListService implements TSExample2.Interfaces.IPlayListService {
         httpService: ng.IHttpService;
+        message: string;
         static $inject = ["$http"];
         constructor($http: ng.IHttpService) {
             this.httpService = $http;
+        }
+
+        getMessage = () => {
+            return this.message;
+        }
+
+        setMessage = (msg: string) => {
+            this.message = msg;
         }
 
         getPlaylist = function () {

@@ -6,6 +6,7 @@
         weather: any;
         lat: number;
         lon: string;
+        transferMessage: string;
     }
 
     export class Person {
