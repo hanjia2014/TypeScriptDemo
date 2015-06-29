@@ -10,7 +10,6 @@
             this.$scope.person = new TSExample2.Scopes.Person();
             this.$scope.person.Id = 1;
             this.$scope.person.Name = "han jia";
-
             this.controllerMessage = "Hello from controller";
         }
         favorites: Array<TSExample2.Interfaces.ITrack>;

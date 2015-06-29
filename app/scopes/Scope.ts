@@ -7,6 +7,7 @@
         lat: number;
         lon: string;
         transferMessage: string;
+        hi: () => void;
     }
 
     export class Person {

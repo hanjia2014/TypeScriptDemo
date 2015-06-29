@@ -12,7 +12,7 @@
     <input placeholder="latitude" data-ng-model="lat" /><input placeholder="longitude" data-ng-model="lon" /> <button data-ng-click="playList.getWeatherAsync()">Get Weather Async</button>
     <div>{{playList.weatherAsync.name}}</div>
 </div>
-
+<div>{{transferMessage}}</div>
 <input type="text" data-ng-model="transferMessage" />
 <button data-ng-click="playList.setMessage(transferMessage)">Set Message</button>
-<a href="#/test">go to test</a>
+<a href="#/test" ui-sref="test">go to test</a>
